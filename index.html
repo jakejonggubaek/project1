@@ -24,6 +24,14 @@
       .front-visual button.slick-prev:before { content:"\e93d"; font-family:'xeicon'; }
       .front-visual button.slick-next { right:120; font-size:0; color:transparent;}
       .front-visual button.slick-next:before { content:"\e940"; font-family:'xeicon'; }
+
+      .swiper-container {
+          width: 600px;
+          height: 300px;
+      }
+
+
+
     </style>
   </head>
 
@@ -77,5 +85,29 @@
       $('.front-visual').slick();
     </script>
     <script src="path/to/swiper.min.js"></script>
+
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })
+    </script>
   </body>
 </html>
